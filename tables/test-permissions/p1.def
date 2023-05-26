@@ -1,0 +1,8 @@
+
+grant read to 10, 11
+read-only
+
+=F1
+
+  type  int
+  grant insert to 33

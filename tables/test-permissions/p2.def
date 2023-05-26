@@ -1,0 +1,11 @@
+
+@isa p1 @
+grant+ insert to 22
+grant+ insert to 33+11+!22, 55+11
+grant+ insert to 44
+
+@isa p1 f1
+
+=F1
+
+  grant delete to 44

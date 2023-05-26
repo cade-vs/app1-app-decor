@@ -1,0 +1,354 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: _de_universal; Type: TABLE; Schema: public; Owner: cade; Tablespace: 
+--
+
+CREATE TABLE _de_universal (
+    id bigint NOT NULL
+);
+
+
+ALTER TABLE public._de_universal OWNER TO cade;
+
+--
+-- Name: de_sq_de_users; Type: SEQUENCE; Schema: public; Owner: cade
+--
+
+CREATE SEQUENCE de_sq_de_users
+    START WITH 10001
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.de_sq_de_users OWNER TO cade;
+
+--
+-- Name: de_sq_test1; Type: SEQUENCE; Schema: public; Owner: cade
+--
+
+CREATE SEQUENCE de_sq_test1
+    START WITH 94568
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.de_sq_test1 OWNER TO cade;
+
+--
+-- Name: de_sq_test2; Type: SEQUENCE; Schema: public; Owner: cade
+--
+
+CREATE SEQUENCE de_sq_test2
+    START WITH 10001
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.de_sq_test2 OWNER TO cade;
+
+--
+-- Name: de_users; Type: TABLE; Schema: public; Owner: cade; Tablespace: 
+--
+
+CREATE TABLE de_users (
+    name character varying(128),
+    _id bigint NOT NULL,
+    pass character varying(512),
+    last_ltime integer
+);
+
+
+ALTER TABLE public.de_users OWNER TO cade;
+
+--
+-- Name: ds_test1; Type: SEQUENCE; Schema: public; Owner: cade
+--
+
+CREATE SEQUENCE ds_test1
+    START WITH 1000
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.ds_test1 OWNER TO cade;
+
+--
+-- Name: ggg; Type: TABLE; Schema: public; Owner: cade; Tablespace: 
+--
+
+CREATE TABLE ggg (
+    g numeric(5,5)
+);
+
+
+ALTER TABLE public.ggg OWNER TO cade;
+
+--
+-- Name: sq_de_users; Type: SEQUENCE; Schema: public; Owner: cade
+--
+
+CREATE SEQUENCE sq_de_users
+    START WITH 10001
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.sq_de_users OWNER TO cade;
+
+--
+-- Name: sq_test1; Type: SEQUENCE; Schema: public; Owner: cade
+--
+
+CREATE SEQUENCE sq_test1
+    START WITH 94568
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.sq_test1 OWNER TO cade;
+
+--
+-- Name: test1; Type: TABLE; Schema: public; Owner: cade; Tablespace: 
+--
+
+CREATE TABLE test1 (
+    name character varying(1024) NOT NULL,
+    _id bigint NOT NULL,
+    ctime integer,
+    suma numeric(22,4),
+    des text,
+    cnt integer,
+    amount1 numeric(20,2),
+    amount2 numeric(36,18),
+    amount3 numeric(10,5),
+    amount4 numeric(36,18),
+    ref bigint
+);
+
+
+ALTER TABLE public.test1 OWNER TO cade;
+
+--
+-- Name: test2; Type: TABLE; Schema: public; Owner: cade; Tablespace: 
+--
+
+CREATE TABLE test2 (
+    name character varying(256),
+    _id bigint NOT NULL,
+    cnt integer
+);
+
+
+ALTER TABLE public.test2 OWNER TO cade;
+
+--
+-- Data for Name: _de_universal; Type: TABLE DATA; Schema: public; Owner: cade
+--
+
+COPY _de_universal (id) FROM stdin;
+\.
+
+
+--
+-- Name: de_sq_de_users; Type: SEQUENCE SET; Schema: public; Owner: cade
+--
+
+SELECT pg_catalog.setval('de_sq_de_users', 10001, false);
+
+
+--
+-- Name: de_sq_test1; Type: SEQUENCE SET; Schema: public; Owner: cade
+--
+
+SELECT pg_catalog.setval('de_sq_test1', 94760, true);
+
+
+--
+-- Name: de_sq_test2; Type: SEQUENCE SET; Schema: public; Owner: cade
+--
+
+SELECT pg_catalog.setval('de_sq_test2', 10184, true);
+
+
+--
+-- Data for Name: de_users; Type: TABLE DATA; Schema: public; Owner: cade
+--
+
+COPY de_users (name, _id, pass, last_ltime) FROM stdin;
+\.
+
+
+--
+-- Name: ds_test1; Type: SEQUENCE SET; Schema: public; Owner: cade
+--
+
+SELECT pg_catalog.setval('ds_test1', 1000, false);
+
+
+--
+-- Data for Name: ggg; Type: TABLE DATA; Schema: public; Owner: cade
+--
+
+COPY ggg (g) FROM stdin;
+\.
+
+
+--
+-- Name: sq_de_users; Type: SEQUENCE SET; Schema: public; Owner: cade
+--
+
+SELECT pg_catalog.setval('sq_de_users', 10001, false);
+
+
+--
+-- Name: sq_test1; Type: SEQUENCE SET; Schema: public; Owner: cade
+--
+
+SELECT pg_catalog.setval('sq_test1', 94569, true);
+
+
+--
+-- Data for Name: test1; Type: TABLE DATA; Schema: public; Owner: cade
+--
+
+COPY test1 (name, _id, ctime, suma, des, cnt, amount1, amount2, amount3, amount4, ref) FROM stdin;
+test name 116	94645	\N	0.2464	\N	\N	\N	\N	\N	\N	10074
+test name 116	94646	\N	0.9464	\N	\N	\N	\N	\N	\N	10075
+test name 116	94647	\N	0.4689	\N	\N	\N	\N	\N	\N	10076
+test name 116	94648	\N	0.9802	\N	\N	\N	\N	\N	\N	10077
+test name 116	94649	\N	0.5627	\N	\N	\N	\N	\N	\N	10078
+test name 116	94650	\N	0.9226	\N	\N	\N	\N	\N	\N	10079
+\.
+
+
+--
+-- Data for Name: test2; Type: TABLE DATA; Schema: public; Owner: cade
+--
+
+COPY test2 (name, _id, cnt) FROM stdin;
+ref0.4600818623762	10074	77
+ref0.209386590027378	10075	4
+ref0.373798220276029	10076	60
+ref0.784276059686334	10077	39
+ref0.217404234546365	10078	23
+ref0.558708166561217	10079	48
+\.
+
+
+--
+-- Name: _de_universal_pkey; Type: CONSTRAINT; Schema: public; Owner: cade; Tablespace: 
+--
+
+ALTER TABLE ONLY _de_universal
+    ADD CONSTRAINT _de_universal_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: de_users_pkey; Type: CONSTRAINT; Schema: public; Owner: cade; Tablespace: 
+--
+
+ALTER TABLE ONLY de_users
+    ADD CONSTRAINT de_users_pkey PRIMARY KEY (_id);
+
+
+--
+-- Name: test1_amount3_key; Type: CONSTRAINT; Schema: public; Owner: cade; Tablespace: 
+--
+
+ALTER TABLE ONLY test1
+    ADD CONSTRAINT test1_amount3_key UNIQUE (amount3);
+
+
+--
+-- Name: test1_amount4_key; Type: CONSTRAINT; Schema: public; Owner: cade; Tablespace: 
+--
+
+ALTER TABLE ONLY test1
+    ADD CONSTRAINT test1_amount4_key UNIQUE (amount4);
+
+
+--
+-- Name: test1_pkey; Type: CONSTRAINT; Schema: public; Owner: cade; Tablespace: 
+--
+
+ALTER TABLE ONLY test1
+    ADD CONSTRAINT test1_pkey PRIMARY KEY (_id);
+
+
+--
+-- Name: test2_pkey; Type: CONSTRAINT; Schema: public; Owner: cade; Tablespace: 
+--
+
+ALTER TABLE ONLY test2
+    ADD CONSTRAINT test2_pkey PRIMARY KEY (_id);
+
+
+--
+-- Name: de_ix_test; Type: INDEX; Schema: public; Owner: cade; Tablespace: 
+--
+
+CREATE UNIQUE INDEX de_ix_test ON test1 USING btree (ctime, suma);
+
+
+--
+-- Name: de_ix_test2; Type: INDEX; Schema: public; Owner: cade; Tablespace: 
+--
+
+CREATE INDEX de_ix_test2 ON test1 USING btree (name, ctime, suma);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
