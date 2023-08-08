@@ -1,0 +1,21 @@
+
+FILEECHO service
+
+1. server part, contains all the login, by default returns input file doubled: 
+
+    /usr/local/decor/apps/app1/lib/Decor/Core/Net/Server/Fileecho.pm
+   
+2. web action, only modify the host:port:
+
+    /usr/local/decor/apps/app1/web/actions/fileecho.pm
+   
+3. run network part server:
+
+    cd /usr/local/decor/core/
+    ./decor-core-app-server.pl -e app1 -u fileecho -p 42112 -rrc -d 
+    
+4. test with curl:
+
+    curl -X POST --data-binary @t.txt http://localhost/decor/app1/?_an=fileecho > resfile.txt
+    
+
