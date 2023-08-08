@@ -1,6 +1,14 @@
 
 FILEECHO service
 
+0. pull app1 decor app:
+
+    git clone https://github.com/cade-vs/app1-app-decor.git
+    
+    or
+    
+    git clone git@github.com:cade-vs/app1-app-decor.git 
+
 1. server part, contains all the login, by default returns input file doubled: 
 
     /usr/local/decor/apps/app1/lib/Decor/Core/Net/Server/Fileecho.pm
